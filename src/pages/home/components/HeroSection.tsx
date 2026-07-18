@@ -62,7 +62,7 @@ export default function HeroSection() {
       <div className="hidden md:block lg:hidden absolute inset-0 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, rgba(10,22,40,0.96) 0%, rgba(10,22,40,0.82) 30%, rgba(10,22,40,0.55) 60%, rgba(10,22,40,0.3) 100%)' }} />
       <div className="hidden lg:block absolute inset-0 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, rgba(10,22,40,0.94) 0%, rgba(10,22,40,0.78) 30%, rgba(10,22,40,0.45) 60%, rgba(10,22,40,0.2) 100%)' }} />
       <div className="absolute inset-0 z-10 pointer-events-none" style={{ background: 'linear-gradient(to bottom, rgba(10,22,40,0.6) 0%, transparent 20%, transparent 65%, rgba(10,22,40,0.8) 100%)' }} />
-      <div className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none h-[80px] sm:h-[120px] md:h-[180px]" style={{ background: 'linear-gradient(to top, #f7fafc 0%, rgba(247,250,252,0.7) 35%, transparent 100%)' }} />
+      <div className="hero-bottom-fade absolute bottom-0 left-0 right-0 z-10 pointer-events-none h-[80px] sm:h-[120px] md:h-[180px]" />
       <button onClick={toggleMute} className={`absolute bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 z-20 w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 backdrop-blur-md border ${muted ? 'bg-white/10 border-white/15 text-white/50 hover:bg-white/20 hover:text-white/80' : 'bg-white/90 border-white/40 text-navy hover:bg-white'}`} aria-label={muted ? t('home.hero.unmute') : t('home.hero.mute')}>
         {muted ? <i className="ri-volume-mute-line text-sm md:text-base" /> : <i className="ri-volume-up-line text-sm md:text-base" />}
       </button>

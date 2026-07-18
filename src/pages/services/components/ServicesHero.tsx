@@ -39,7 +39,7 @@ export default function ServicesHero() {
           <Reveal delay={0.2}><p className="text-sm sm:text-sm md:text-base lg:text-lg text-foreground-200/75 max-w-xl leading-relaxed">{t('services.hero.subtitle')}</p></Reveal>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 z-10 h-[50px] sm:h-[80px] md:h-[100px] pointer-events-none" style={{ background: 'linear-gradient(to top, #f7fafc 0%, transparent 100%)' }} />
+      <div className="hero-bottom-fade-sm absolute bottom-0 left-0 right-0 z-10 h-[50px] sm:h-[80px] md:h-[100px] pointer-events-none" />
     </section>
   );
 }

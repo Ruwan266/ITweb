@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Hero bottom-fade base color (RGB channels) — light theme */
+    --hero-fade-rgb: 247, 250, 252;
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -52,6 +57,8 @@
 
   .dark {
     color-scheme: dark;
+    /* Hero bottom-fade base color (RGB channels) — dark theme (matches dark body bg #060d1a) */
+    --hero-fade-rgb: 6, 13, 26;
   }
 
   /* Smooth transitions on common elements */
@@ -784,11 +791,23 @@
     filter: drop-shadow(0 0 9px rgba(255, 255, 255, 0.12)) drop-shadow(0 0 3px rgba(255, 255, 255, 0.08));
   }
 
+  /* Theme-aware hero bottom fade. Colour comes from --hero-fade-rgb so the
+     same gradient turns dark automatically under .dark (no white band). */
   .hero-bottom-fade {
-    background: linear-gradient(to top, #f7fafc 0%, rgba(247,250,252,0.7) 35%, transparent 100%);
+    background: linear-gradient(
+      to top,
+      rgba(var(--hero-fade-rgb), 1) 0%,
+      rgba(var(--hero-fade-rgb), 0.7) 35%,
+      transparent 100%
+    );
   }
 
-  .dark .hero-bottom-fade {
-    background: linear-gradient(to top, #0a1628 0%, rgba(10,22,40,0.7) 35%, transparent 100%);
+  /* Two-stop variant used by the Projects/Services page heroes. */
+  .hero-bottom-fade-sm {
+    background: linear-gradient(
+      to top,
+      rgba(var(--hero-fade-rgb), 1) 0%,
+      transparent 100%
+    );
   }
 }
