@@ -118,8 +118,6 @@ export default function Navbar() {
             className="flex items-center justify-center whitespace-nowrap cursor-pointer min-w-0 flex-shrink-0 h-full"
           >
             <LogoImage
-              src="https://public.readdy.ai/ai/img_res/2506b516-b6ad-4475-b638-8403c52df845.png"
-              alt="SINS Logo"
               className="h-12 sm:h-14 md:h-[70px] lg:h-[76px] w-auto object-contain"
             />
           </Link>

@@ -1,13 +1,18 @@
 import { useState, type CSSProperties } from 'react';
 
+/** Single source of truth for the brand logo asset (served from /public). */
+export const LOGO_SRC = '/logo.png';
+export const LOGO_ALT = 'SmartInfinity Solutions';
+
 interface LogoImageProps {
-  src: string;
-  alt: string;
+  /** Defaults to the brand logo; override only for a different mark. */
+  src?: string;
+  alt?: string;
   className?: string;
   style?: CSSProperties;
 }
 
-export default function LogoImage({ src, alt, className = '', style }: LogoImageProps) {
+export default function LogoImage({ src = LOGO_SRC, alt = LOGO_ALT, className = '', style }: LogoImageProps) {
   const [loaded, setLoaded] = useState(false);
 
   return (

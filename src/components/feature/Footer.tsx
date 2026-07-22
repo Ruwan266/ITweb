@@ -141,8 +141,6 @@ export default function Footer() {
             <div className="w-full lg:w-[340px] xl:w-[380px] lg:shrink-0">
               <Link to="/" className="inline-flex items-center gap-2 sm:gap-3 rounded-xl outline-offset-4">
                 <LogoImage
-                  src="https://public.readdy.ai/ai/img_res/2506b516-b6ad-4475-b638-8403c52df845.png"
-                  alt="SINS Logo"
                   className="h-12 sm:h-14 w-auto object-contain block"
                 />
               </Link>
